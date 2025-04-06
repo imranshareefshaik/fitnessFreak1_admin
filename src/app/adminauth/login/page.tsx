@@ -1,54 +1,9 @@
-// "use client";
-// import React, { useState } from 'react';
-// import '../auth.css';
-// import { ToastContainer, toast } from 'react-toastify';
-// const SignupPage = () => { 
-//     const [name, setName] = useState('');
-//     const [email, setEmail] = useState('');
-//     const [password, setPassword] = useState('');
-
-//         const handleSignup = async () => { 
-//             const response
-//         }
-//     return (
-//        <div className='formpage'>
-//         <input
-//          type='text'
-//          placeholder='Name'
-//          value={name}
-//          onChange={(e) => setName(e.target.value)}
-//         />
-       
-//        <input
-//        type='email'
-//        placeholder='Email'
-//        value={email}
-//        onChange={(e) => setEmail(e.target.value)}
-//       />
-     
-//      <input
-//          type='password'
-//          placeholder='Password'
-//          value={password}
-//          onChange={(e) => setPassword(e.target.value)}
-//         />
-//         <button onClick={handleSignup}>Signup</button>
-//     </div> 
-
-
-//  )
-
-// }
-
-// export default SignupPage
-'use client';
+"use client";
 import React, { useState } from 'react';
 import '../auth.css';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-const Signuppage = () => {
-    
+const SignupPage = () => { 
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -83,26 +38,29 @@ const Signuppage = () => {
             console.error('An error occurred during registration', error);
         }
     };
-
     return (
-        <div className='formpage'>
-            <ToastContainer />
-            <input
-                type='email'
-                placeholder='Email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-                type='password'
-                placeholder='password'
-                value={email}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            
-            <button onClick={handleSignup}>Sign in</button>
-        </div>
-    );
-};
+       <div className='formpage'>
+        <ToastContainer />
+       
+       <input
+       type='email'
+       placeholder='Email'
+       value={email}
+       onChange={(e) => setEmail(e.target.value)}
+      />
+     
+     <input
+         type='password'
+         placeholder='Password'
+         value={password}
+         onChange={(e) => setPassword(e.target.value)}
+        />
+        <button onClick={handleSignup}>Signup</button>
+    </div> 
 
-export default Signuppage;
+
+ )
+
+}
+
+export default SignupPage
